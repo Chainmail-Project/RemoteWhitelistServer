@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 
 whitelist_path = os.path.join(os.getcwd(), "whitelist.json")
 if not os.path.isfile(whitelist_path):
-    whitelist = []
+    whitelist = {}
     with open(whitelist_path, "w") as f:
         json.dump(whitelist, f)
 else:
